@@ -11,10 +11,10 @@ export function buildParams(useCurrentTimeRange: boolean, selectedTheme?: string
   params.to = range.to.valueOf();
   params.orgId = config.bootData.user.orgId;
 
-  if (!useCurrentTimeRange) {
-    delete params.from;
-    delete params.to;
-  }
+  // if (!useCurrentTimeRange) {
+  delete params.from;
+  delete params.to;
+  // }
 
   if (selectedTheme !== 'current') {
     params.theme = selectedTheme;
